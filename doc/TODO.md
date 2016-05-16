@@ -1,5 +1,11 @@
 # TODO
 
+Goals
+1. Run tests from both script (with progress and result output) and from unit test
+2. Run particular test by name
+3. Support YAML and JSON
+4. Implement extensible way to run customized requests (find how)
+
 All
 * Configure Travis and/or SLI to run all tests
 
@@ -22,3 +28,4 @@ Demo project
 * More fixtures
     * Twitter
     * GitHub/Gist
+* Implement php-unit solution for API testing
