@@ -1,0 +1,51 @@
+tests:
+    test_get_roadmap_for_v3:
+        request:
+            method: GET
+            uri: 'http://symfony.com/roadmap.json?version=3.0'
+        response:
+            status_code: 200
+            body_constraints:
+                version:
+                    - 'NotBlank'
+                    - 'Type(type="string")'
+                release_date:
+                    - 'NotBlank'
+                    - 'Type(type="string")'
+                is_lts:
+                    - 'Type(type="bool")'
+                is_latest:
+                    - 'Type(type="bool")'
+                eom:
+                    - 'NotBlank'
+                    - 'Type(type="string")'
+                eol:
+                    - 'NotBlank'
+                    - 'Type(type="string")'
+                is_eomed:
+                    - 'Type(type="bool")'
+                is_eoled:
+                    - 'Type(type="bool")'
+                eod:
+                    - 'NotBlank'
+                    - 'Type(type="string")'
+
+    test_get_roadmap_for_unexisting_version:
+        request:
+            method: GET
+            uri: 'http://symfony.com/roadmap.json?version=0.1'
+        response:
+            status_code: 404
+            body_constraints:
+                symfony_versions/lts:
+                    - 'EqualTo(value="2.8.6")'
+                symfony_versions/stable:
+                    - 'EqualTo(value="3.0.6")'
+                symfony_versions/beta:
+                    - 'EqualTo(value="3.1.0-BETA1")'
+                latest_stable_version:
+                    - 'EqualTo(value="3.0")'
+                version:
+                    - 'EqualTo(value="0.1")'
+                error_message:
+                    - 'EqualTo(value="Unsupported version (the version to check must be 2.x or higher).")'
