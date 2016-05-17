@@ -10,7 +10,7 @@ use PHPUnit_Framework_TestCase;
 
 class ApiTest extends PHPUnit_Framework_TestCase
 {
-    public function testFixtures()
+    public function testApiResponsesAreValid()
     {
         $suiteLoader = new SuiteLoader();
         $suite = $suiteLoader->loadFromDir(__DIR__.'/../fixtures');
@@ -23,10 +23,13 @@ class ApiTest extends PHPUnit_Framework_TestCase
             $request = $test->getRequest();
             $response = $guzzleClient->send($request);
 
-            $assertion = new IsApiResponseValidConstraint($test->getResponseExpectation());
-            self::assertThat($response, $assertion);
-
+            $this->assertApiResponseIsValid($response, $test);
         }
+    }
 
+    public function assertApiResponseIsValid($response, Test $test)
+    {
+        $assertion = new IsApiResponseValidConstraint($test->getResponseExpectation());
+        self::assertThat($response, $assertion);
     }
 }
