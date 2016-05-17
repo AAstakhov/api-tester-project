@@ -6,11 +6,19 @@ Goals
 2. Run particular test by name
 3. Support YAML and JSON
 4. Implement extensible way to run customized requests (find how)
+    * Either already prepared method or event listeners
 
 All
 * Configure Travis and/or SLI to run all tests
 
 ApiTester
+* ResponseValidator
+    * add unit test for failure
+    * use ResponseValidator in Runner
+    * use ArrayValidator in DI way
+    * output information about current test
+* Refactoring
+    * Move ConstraintReader(Loader) to SuiteLoader
 * Run from phpunit
     * Implement assert/constraint
     * Implement test output
@@ -23,8 +31,9 @@ ApiTester
 * Response: validate response headers
 * Find out how to extend request from app (event, callback?)
 * Provide better exception handling if yaml file is not properly parsed
+* Tests
 
-Validator
+ArrayValidator
 * Support simple string value as synonym for EqualTo constraint
 * Implement translations (translator for validator)
 * Write more tests, check coverage
@@ -32,6 +41,9 @@ Validator
 
 Demo project
 * More fixtures
+    * Packagist
     * Twitter
     * GitHub/Gist
+    * Need API with OAuth
+    * XML Api?
 * Implement php-unit solution for API testing
