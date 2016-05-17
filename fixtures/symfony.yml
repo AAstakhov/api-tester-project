@@ -42,7 +42,7 @@ tests:
                 symfony_versions/stable:
                     - 'EqualTo(value="3.0.6")'
                 symfony_versions/beta:
-                    - 'EqualTo(value="3.1.0-BETA1")'
+                    - 'EqualTo(value="3.1.0-BETA1d")'
                 latest_stable_version:
                     - 'EqualTo(value="3.0")'
                 version:
