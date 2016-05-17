@@ -5,6 +5,7 @@
          backupGlobals="false"
          colors="true"
          bootstrap="vendor/autoload.php"
+         stopOnFailure="false"
 >
     <testsuites>
         <testsuite name="ApiTester Test Suite">
