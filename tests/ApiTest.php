@@ -29,7 +29,7 @@ class ApiTest extends PHPUnit_Framework_TestCase
 
     public function assertApiResponseIsValid($response, Test $test)
     {
-        $assertion = new IsApiResponseValidConstraint($test->getResponseExpectation());
+        $assertion = new IsApiResponseValidConstraint($test);
         self::assertThat($response, $assertion);
     }
 }
