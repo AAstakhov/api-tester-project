@@ -12,13 +12,17 @@ All
 * Configure Travis and/or SLI to run all tests
 
 ApiTester
+* Use ValidatorInterface for Response/Validator
+* Convert TestMetadata to object
+* Try to use Constraint->root instead of explicit prefixing key
+* Improve phpunit test failure output
+* Read status_code constraint in the same way like body constraints?
+* Implement header constraints
 * ResponseValidator
     * add unit test for failure
-    * use ResponseValidator in Runner
     * use ArrayValidator in DI way
     * output information about current test
-* Refactoring
-    * Move ConstraintReader(Loader) to SuiteLoader
+
 * Run from phpunit
     * Implement assert/constraint
     * Implement test output
