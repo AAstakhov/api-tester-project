@@ -38,7 +38,7 @@ ApiTester
 * Tests
 
 ArrayValidator
-* Support simple string value as synonym for EqualTo constraint
+* ~~Support simple string value as synonym for EqualTo constraint~~
 * Implement translations (translator for validator)
 * Write more tests, check coverage
 
