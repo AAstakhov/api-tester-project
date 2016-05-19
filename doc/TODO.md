@@ -19,7 +19,7 @@ ApiTester
 * Read status_code constraint in the same way like body constraints?
 * Implement header constraints
 * ResponseValidator
-    * add unit test for failure
+    * ~~add unit test for failure~~
     * use ArrayValidator in DI way
     * output information about current test
 
