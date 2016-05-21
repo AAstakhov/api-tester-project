@@ -12,8 +12,6 @@ All
 * Configure Travis and/or SLI to run all tests
 
 ApiTester
-* Convert TestMetadata to object
-* Improve phpunit test failure output
 * Implement header constraints
 * R&D for yaml format compatible with RAML (or Swagger)
 * Use ValidatorInterface for Response/Validator?
@@ -24,15 +22,9 @@ ApiTester
     * use ArrayValidator in DI way
     * output information about current test
 Runner
-    * script: check input parameters
-
-* Run from phpunit
-    * ~~Implement assert/constraint~~
-    * Implement test output
-* Run from api-tester script
+    * script: check that input parameter provided
     * Find a way to output progress and test results (console? progress?)
     * Install to vendor/bin using composer
-    * output of errors
     * script mode: stopOnFailure
 * Request: send headers
 * Response: validate response headers
@@ -40,7 +32,6 @@ Runner
 * Provide better exception handling if yaml file is not properly parsed
 
 ArrayValidator
-* ~~Support simple string value as synonym for EqualTo constraint~~
 * Implement translations (translator for validator)
 * Write more tests, check coverage
 
