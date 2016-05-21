@@ -23,6 +23,8 @@ ApiTester
     * ~~add unit test for failure~~
     * use ArrayValidator in DI way
     * output information about current test
+Runner
+    * script: check input parameters
 
 * Run from phpunit
     * ~~Implement assert/constraint~~
