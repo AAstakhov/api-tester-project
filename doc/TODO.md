@@ -12,26 +12,24 @@ All
 * Configure Travis and/or SLI to run all tests
 
 ApiTester
-* Implement header constraints
 * R&D for yaml format compatible with RAML (or Swagger)
 * Use ValidatorInterface for Response/Validator?
 * Try to use Constraint->root instead of explicit prefixing key
 * Read status_code constraint in the same way like body constraints?
 * ResponseValidator
-    * ~~add unit test for failure~~
     * use ArrayValidator in DI way
-    * output information about current test
 Runner
     * script: check that input parameter provided
     * Find a way to output progress and test results (console? progress?)
     * Install to vendor/bin using composer
     * script mode: stopOnFailure
 * Request: send headers
-* Response: validate response headers
 * Find out how to extend request from app (event, callback?)
 * Provide better exception handling if yaml file is not properly parsed
 
 ArrayValidator
+* !!! Change algorithm of validation: iterate all available constraints, mark array keys that were not matched
+* Fix test for case with wrong constraint syntax
 * Implement translations (translator for validator)
 * Write more tests, check coverage
 
