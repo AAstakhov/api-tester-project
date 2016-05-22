@@ -30,6 +30,7 @@ Runner
 ArrayValidator
 * !!! Change algorithm of validation: iterate all available constraints, mark array keys that were not matched
 * Fix test for case with wrong constraint syntax
+* Support constraints for array
 * Implement translations (translator for validator)
 * Write more tests, check coverage
 
