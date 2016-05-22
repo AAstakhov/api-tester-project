@@ -5,6 +5,9 @@ tests:
             uri: 'http://symfony.com/roadmap.json?version=3.0'
         response:
             status_code: 200
+            headers:
+                via:
+                    - 'Type(type="string")'
             body:
                 version:
                     - 'Regex(pattern="#^\d+\.\d+(\.\d+(-.*)?)?$#")'
