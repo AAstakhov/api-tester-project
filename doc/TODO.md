@@ -12,6 +12,8 @@ All
 * Configure Travis and/or SLI to run all tests
 
 ApiTester
+* Better exception handling in SuiteLoader
+* Implement Uri as object
 * R&D for yaml format compatible with RAML (or Swagger)
 * Use ValidatorInterface for Response/Validator?
 * Try to use Constraint->root instead of explicit prefixing key
@@ -19,18 +21,14 @@ ApiTester
 * ResponseValidator
     * use ArrayValidator in DI way
 Runner
-    * script: check that input parameter provided
     * Find a way to output progress and test results (console? progress?)
     * Install to vendor/bin using composer
     * script mode: stopOnFailure
-* Request: send headers
 * Find out how to extend request from app (event, callback?)
 * Provide better exception handling if yaml file is not properly parsed
 
 ArrayValidator
-* !!! Change algorithm of validation: iterate all available constraints, mark array keys that were not matched
-* Fix test for case with wrong constraint syntax
-* Support constraints for array
+* ??? Change algorithm of validation: iterate all available constraints, mark array keys that were not matched
 * Implement translations (translator for validator)
 * Write more tests, check coverage
 
