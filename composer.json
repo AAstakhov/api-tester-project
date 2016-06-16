@@ -3,10 +3,11 @@
   "type": "project",
   "description": "Demo project for api-tester library",
   "homepage": "https://github.com/AAstakhov/api-tester-project",
+  "license": "MIT",
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5 || ^7.0",
-    "aa/api-tester": "dev-master"
+    "aa/api-tester": "0.*"
   },
   "require-dev": {
     "phpunit/phpunit": "5.*"
