@@ -1,0 +1,12 @@
+# Packagist API: https://packagist.org/apidoc
+tests:
+#    test_list_packages_by_organization:
+#        request:
+#            method: GET
+#            uri: https://packagist.org/packages/list.json?vendor=aa
+#        response:
+#            status_code: 200
+#            body:
+#                packageNames:
+#                    - Type(type="array")
+
