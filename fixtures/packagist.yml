@@ -12,4 +12,89 @@ tests:
                 packageNames/*:
                     - Type(type="string")
 
+    test_get_package_data:
+        request:
+            method: GET
+            uri: https://packagist.org/packages/aa/api-tester.json
+        response:
+            status_code: 200
+            body:
+                package/name: 'aa/api-tester'
+                package/description:
+                    - Type(type="string")
+                package/time:
+                    #- DateTime()
+                    - Type(type="string")
+                package/maintainers:
+                    - Type(type="array")
+                    - Count(min="1")
+                package/maintainers/*/name:
+                    - Type(type="string")
+                package/versions:
+                    - Type(type="array")
+                    - Count(min="1")
+
+                package/versions/*/name: 'aa/api-tester'
+                package/versions/*/description:
+                    - Type(type="string")
+                package/versions/*/keywords:
+                    - Type(type="array")
+                package/versions/*/homepage: 'https://github.com/AAstakhov/api-tester'
+                package/versions/*/version:
+                    - Type(type="string")
+                package/versions/*/version_normalized:
+                    - Type(type="string")
+                package/versions/*/license:
+                    - Type(type="array")
+                package/versions/*/authors:
+                    - Type(type="array")
+                package/versions/*/source/type: 'git'
+                package/versions/*/source/url: 'https://github.com/AAstakhov/api-tester.git'
+                package/versions/*/source/reference:
+                    - Type(type="string")
+                package/versions/*/dist/type: zip
+                package/versions/*/dist/url:
+                    - Url()
+                package/versions/*/dist/reference:
+                    - Type(type="string")
+                package/versions/*/dist/shasum:
+                    - Type(type="string")
+                package/versions/*/type: 'library'
+                package/versions/*/time:
+                    #- DateTime()
+                    - Type(type="string")
+                package/versions/*/autoload:
+                    - Type(type="array")
+                package/versions/*/autoload/*:
+                    - Type(type="array")
+                package/versions/*/require:
+                    - Type(type="array")
+                package/versions/*/require-dev:
+                    - Type(type="array")
+
+                package/type: 'library'
+                package/repository: 'https://github.com/AAstakhov/api-tester'
+                package/github_stars:
+                    - Type(type="integer")
+                package/github_watchers:
+                    - Type(type="integer")
+                package/github_forks:
+                    - Type(type="integer")
+                package/github_open_issues:
+                    - Type(type="integer")
+                package/language: 'PHP'
+                package/dependents:
+                    - Type(type="integer")
+                package/suggesters:
+                    - Type(type="integer")
+
+                package/downloads/total:
+                    - Type(type="integer")
+                package/downloads/monthly:
+                    - Type(type="integer")
+                package/downloads/daily:
+                    - Type(type="integer")
+
+                package/favers:
+                    - Type(type="integer")
 
