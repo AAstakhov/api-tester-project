@@ -23,17 +23,16 @@ tests:
                 package/description:
                     - Type(type="string")
                 package/time:
-                    #- DateTime()
-                    - Type(type="string")
+                    - DateTime(format="Y-m-d\TH:i:sP")
                 package/maintainers:
                     - Type(type="array")
                     - Count(min="1")
                 package/maintainers/*/name:
                     - Type(type="string")
+
                 package/versions:
                     - Type(type="array")
                     - Count(min="1")
-
                 package/versions/*/name: 'aa/api-tester'
                 package/versions/*/description:
                     - Type(type="string")
@@ -61,8 +60,7 @@ tests:
                     - Type(type="string")
                 package/versions/*/type: 'library'
                 package/versions/*/time:
-                    #- DateTime()
-                    - Type(type="string")
+                    - DateTime(format="Y-m-d\TH:i:sP")
                 package/versions/*/autoload:
                     - Type(type="array")
                 package/versions/*/autoload/*:
